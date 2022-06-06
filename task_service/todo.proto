@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package todo;
+package task_service;
 
 service ToDoService {
     rpc Create(Task) returns (Task);

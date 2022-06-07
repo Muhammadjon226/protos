@@ -3,23 +3,20 @@ syntax = "proto3";
 package user_service;
 
 service UserService {
-    rpc CreateUser (User) returns (User);
     rpc GetUser(ID) returns (User);
     rpc ListUsers(ListUserRequest) returns (ListUserResponse);
-    rpc UpdateUser(User) returns (User);
-    rpc DeleteUser (ID) returns (Empty);
 }
 
 message Empty {}
 
 message User {
-    string user_id = 1;
+    string id = 1;
     string Name = 2;
     int64 age = 3;    
 }
 
 message ID {
-    string user_id = 1;
+    string id = 1;
 }
 
 message ListUserRequest {

@@ -3,11 +3,11 @@ syntax = "proto3";
 package first_service;
 
 service FirstService {
-    rpc CreatePost(Post) returns (Post);
-    rpc GetPostById(ByIdReq) returns (Post);
-    rpc ListPosts(ListReq) returns (ListResp);
-    rpc UpdatePost(Post) returns (Post);
-    rpc DeletePost(ByIdReq) returns (EmptyResp);
+    // rpc CreatePost(Post) returns (Post);
+    // rpc GetPostById(ByIdReq) returns (Post);
+    // rpc ListPosts(ListReq) returns (ListResp);
+    // rpc UpdatePost(Post) returns (Post);
+    // rpc DeletePost(ByIdReq) returns (EmptyResp);
     rpc GetPostsFromOpenApi(EmptyResp) returns (EmptyResp);
 }
 

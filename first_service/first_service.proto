@@ -6,7 +6,7 @@ service FirstService {
     rpc CreatePost(Post) returns (PostResponse);
     rpc GetPostByID(ByIdReq) returns (PostResponse);
     rpc ListPosts(ListReq) returns (ListResp);
-    rpc UpdatePost(Post) returns (PostResponse);
+    rpc UpdatePost(Post) returns (EmptyResp);
     rpc DeletePost(ByIdReq) returns (EmptyResp);
     rpc GetPostsFromOpenAPI(EmptyResp) returns (EmptyResp);
 }

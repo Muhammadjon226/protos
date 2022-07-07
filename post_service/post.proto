@@ -4,7 +4,7 @@ package post_service;
 
 service PostService {
     rpc CreatePost(Post) returns (PostResponse);
-    rpc GetPostById(ByIdReq) returns (PostResponse);
+    rpc GetPostByID(ByIdReq) returns (PostResponse);
     rpc ListPosts(ListReq) returns (ListResp);
     rpc UpdatePost(Post) returns (PostResponse);
     rpc DeletePost(ByIdReq) returns (EmptyResp);

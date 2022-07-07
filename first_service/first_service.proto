@@ -8,7 +8,7 @@ service FirstService {
     rpc ListPosts(ListReq) returns (ListResp);
     rpc UpdatePost(Post) returns (PostResponse);
     rpc DeletePost(ByIdReq) returns (EmptyResp);
-    rpc GetPostsFromOpenApi(EmptyResp) returns (EmptyResp);
+    rpc GetPostsFromOpenAPI(EmptyResp) returns (EmptyResp);
 }
 
 message EmptyResp {}

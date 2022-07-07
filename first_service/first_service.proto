@@ -39,6 +39,6 @@ message ListReq {
 }
 
 message ListResp {
-    repeated Post Posts = 1;
+    repeated PostResponse Posts = 1;
     int64 count = 2;
 }

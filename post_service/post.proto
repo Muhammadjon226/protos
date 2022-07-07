@@ -3,10 +3,10 @@ syntax = "proto3";
 package post_service;
 
 service PostService {
-    rpc CreatePost(Post) returns (Post);
-    rpc GetPostById(ByIdReq) returns (Post);
+    rpc CreatePost(Post) returns (PostResponse);
+    rpc GetPostById(ByIdReq) returns (PostResponse);
     rpc ListPosts(ListReq) returns (ListResp);
-    rpc UpdatePost(Post) returns (Post);
+    rpc UpdatePost(Post) returns (PostResponse);
     rpc DeletePost(ByIdReq) returns (EmptyResp);
 }
 
@@ -19,6 +19,15 @@ message Post {
     string body = 4;
 }
 
+message PostResponse {
+    int64 id = 1;
+    int64 user_id = 2;
+    string title = 3;
+    string body = 4;
+    string created_at = 5;
+    string updated_at = 6;
+}
+
 message ByIdReq {
     int64 id = 1;
 }
@@ -29,6 +38,6 @@ message ListReq {
 }
 
 message ListResp {
-    repeated Post Posts = 1;
+    repeated PostResponse Posts = 1;
     int64 count = 2;
 }
